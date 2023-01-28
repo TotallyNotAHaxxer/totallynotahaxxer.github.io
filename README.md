@@ -1,2 +1,1 @@
-# TotallyNotAHaxxer.github.io
-A website for Me!
+**https://arkangel43.github.io/totallynotahaxxer.github.io/**
