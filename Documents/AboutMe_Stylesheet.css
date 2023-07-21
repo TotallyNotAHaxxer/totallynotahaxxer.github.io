@@ -1,0 +1,145 @@
+* {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 17px;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 30px 0 0 0;
+    margin-bottom: 18px;
+    margin-top: 33px;
+    color: #333;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 10px 0 20px 0;
+    color: #333;
+}
+
+header {
+    width: 640px;
+    margin: auto;
+}
+
+section {
+    width: 1000px;
+    margin-top: 1550px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    z-index: 0; 
+    pointer-events: none; 
+}
+
+nav {
+    z-index: 1; 
+}
+
+section * {
+    pointer-events: auto; 
+}
+
+body {
+    background-image: url("../Images/BannerPenguin.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-size: 100vw auto;
+}
+
+
+section p {
+    margin-bottom: 27px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+section img {
+    max-width: 640px;
+}
+
+footer {
+    padding: 0 20px;
+    margin: 50px 0;
+    text-align: center;
+    font-size: 12px;
+} 
+.aspectRatioPlaceholder {
+    max-width: auto !important;
+    max-height: auto !important;
+}
+
+.aspectRatioPlaceholder-fill {
+    padding-bottom: 0 !important;
+}
+
+header,
+section[data-field=subtitle],
+section[data-field=description] {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+ul li {
+    padding: 6px 0;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-family: 'Lato', sans-serif;
+    color: #ecf0f1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+ul li a::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+ul li a:hover {
+    color: #6942f5;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

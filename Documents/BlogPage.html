@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BlogPage.css">
+    <link rel="icon" type="image/x-icon" href="../Images/Screenshot from 2023-07-04 22-47-39.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <title>MediaPage</title>
+</head>
+
+
+<body>
+    <nav class="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Documents/Skills.html">Skills</a></li>
+          <li><a href="../Documents/About_Me_Page.html">About Me</a></li>
+          <li><a href="../Documents/Current_Projects.html">Projects</a></li>
+          <li><a href="../Documents/MediaPage.html">Media</a></li>
+          <li><a href="../Documents/BlogPage.html">Blog</a></li>
+          <li><a href="#">Experience</a></li>
+        </ul>
+    </nav>
+    <div class="typewriter">
+        <h1>
+            <span id="typewriter-text"></span>
+            <span id="cursor"></span>
+        </h1>
+    </div>
+    <figure class="image-block">
+        <h1> Medium Blog Page</h1>
+        <img src="../Images/MkIII-TeamAck.png" alt="">
+        <figcaption>
+            <h3>
+                About My Page
+            </h3>
+            <p>
+                On my medium, my article count is roughly 50 articles of knowledge deep and they are all free of charge
+                I firmly<br> believe that everyone should have access to knowledge especially unique information without the 
+                ability of paying hundreds or even thousands and medium is the place I<br> do it! Having working with teams and 
+                <br>complete shadow titans, I noticed that the best type of knowledge and educators do it for the better of humanity 
+                <br>and will not make a charge or put a price tag on the <br>limitations of knowledge! My medium page is <br>extremely active 
+                and always in some shape or form diverse and unique in its own way!
+            </p>
+            <button
+                onclick="window.location.href = `https://medium.com/@Totally_Not_A_Haxxer`;">View My Page</button>
+        </figcaption>
+    </figure>
+    <figure class="image-block">
+        <h1> Blogger Page</h1>
+        <img src="../Images/Screenshot from 2023-07-04 22-47-39.png" alt="">
+        <figcaption>
+            <h3>
+                About My Page
+            </h3>
+            <p> 
+                This blogger page is something I was invited to a while <br>back and will be using much more frequently.
+                Here we talk <br> all tech, all tools, all news in the industry and so on from <br>there! You may recongnize a few articles there!
+            </p>
+            <button
+                onclick="window.location.href = `https://www.blogger.com/blog/post/edit/4638875627556417471/38507471449655067`;">View My Page</button>
+        </figcaption>
+    </figure>
+    <figure class="image-block">
+        <h1> SkyPenguin-Labs Medium Page</h1>
+        <img src="../Images/SkyPenguinLabsMedium.png" alt="">
+        <figcaption>
+            <h3>
+                About My Page
+            </h3>
+            <p> 
+                This is the offical medium page for SkyPenguin-Labs and is where I will be posting content related to tools 
+                or <br>frameworks and general research done under SkyPenguin Labs!
+            </p>
+            <button
+                onclick="window.location.href = `https://medium.com/@skypenguinsolutions`;">View The Blog!</button>
+        </figcaption>
+    </figure>
+</body>
+
+
+
+
+
+</html>
+<script>
+    const typewriterText = document.getElementById("typewriter-text");
+    const texts = ["Welcome To My Blog Page!", "Below Are My Top Active Blog Areas! (Stay Tuned: More To Come!)"]; 
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 50;
+    let erasingSpeed = 50; 
+    let delayBeforeTyping = 1000;
+    function type() {
+        const currentText = texts[textIndex];
+        if (isDeleting) {
+            typewriterText.textContent = currentText.slice(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                textIndex++;
+                if (textIndex === texts.length) {
+                    textIndex = 0;
+                }
+                setTimeout(type, delayBeforeTyping);
+            } else {
+                setTimeout(type, erasingSpeed);
+            }
+        } else {
+            typewriterText.textContent = currentText.slice(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, delayBeforeTyping);
+            } else {
+                setTimeout(type, typingSpeed);
+            }
+        }
+    }
+    setTimeout(type, delayBeforeTyping);
+</script>

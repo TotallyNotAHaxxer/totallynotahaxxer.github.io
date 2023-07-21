@@ -1,0 +1,45 @@
+body {
+    background-image: url("../Images/BannerPenguin.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-size: 100vw auto;
+}
+
+
+.typewriter {
+    margin-top: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typewriter h1 {
+    color: black;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+}
+
+#cursor {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1px;
+    height: 1em;
+    background-color: #fff;
+    animation: blink-caret 0.5s infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
