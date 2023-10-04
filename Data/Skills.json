@@ -1,0 +1,211 @@
+{
+  "skills": [
+      {
+          "name": "JavaScript",
+          "proof": "Certification",
+          "learned": "Online course",
+          "inUse": true
+      },
+      {
+          "name": "Crystal"
+      },
+      {
+          "name": "R-Script"
+      },
+      {
+          "name": "Ruby"
+      },
+      {
+          "name": "Rust"
+      },
+      {
+          "name": "Go"
+      },
+      {
+          "name": "Writing"
+      },
+      {
+          "name": "Podcasting"
+      },
+      {
+          "name": "Talking"
+      },
+      {
+          "name": "Public Speaking"
+      },
+      {
+          "name": "Stages"
+      },
+      {
+          "name": "Design"
+      },
+      {
+          "name": "UI"
+      },
+      {
+          "name": "UX"
+      },
+      {
+          "name": "YouTube"
+      },
+      {
+          "name": "Social Media Management"
+      },
+      {
+          "name": "Youth Motivation"
+      },
+      {
+          "name": "Authorship"
+      },
+      {
+          "name": "Video Editing"
+      },
+      {
+          "name": "Photo Editing"
+      },
+      {
+          "name": "Brand and Logo Design"
+      },
+      {
+          "name": "Company Management"
+      },
+      {
+          "name": "Social Management"
+      },
+      {
+          "name": "Technical Writing"
+      },
+      {
+          "name": "Web Security"
+      },
+      {
+          "name": "API Security"
+      },
+      {
+          "name": "Binary Exploitation"
+      },
+      {
+          "name": "Reverse Engineering"
+      },
+      {
+          "name": "CTF Building"
+      },
+      {
+          "name": "Content Creation"
+      },
+      {
+          "name": "Content Editing"
+      },
+      {
+          "name": "Content Management"
+      },
+      {
+          "name": "Content Review"
+      },
+      {
+          "name": "Software Engineering"
+      },
+      {
+          "name": "Cyber Security Engineering"
+      },
+      {
+          "name": "Software Design"
+      },
+      {
+          "name": "Software Creating"
+      },
+      {
+          "name": "Software Development"
+      },
+      {
+          "name": "Lisp"
+      },
+      {
+          "name": "Lua"
+      },
+      {
+          "name": "C"
+      },
+      {
+          "name": "C++"
+      },
+      {
+          "name": "C#"
+      },
+      {
+          "name": "Holy C"
+      },
+      {
+          "name": "Perl"
+      },
+      {
+          "name": "JSON"
+      },
+      {
+          "name": "XML"
+      },
+      {
+          "name": "PLIST"
+      },
+      {
+          "name": "BPLIST"
+      },
+      {
+          "name": "File Forensics"
+      },
+      {
+          "name": "Digital Forensics"
+      },
+      {
+          "name": "UAS System Testing"
+      },
+      {
+          "name": "UAV Testing"
+      },
+      {
+          "name": "General Pentesting"
+      },
+      {
+          "name": "Automotive Cybersecurity"
+      },
+      {
+          "name": "CSS"
+      },
+      {
+          "name": "HTML"
+      },
+      {
+          "name": "SASS"
+      },
+      {
+          "name": "HAML"
+      },
+      {
+          "name": "HTMX"
+      },
+      {
+          "name": "Template Design"
+      },
+      {
+          "name": "Networking"
+      },
+      {
+          "name": "General Community Development"
+      },
+      {
+          "name": "IoT Testing"
+      },
+      {
+          "name": "Book Editing"
+      },
+      {
+          "name": "General Editing"
+      },
+      {
+          "name": "Mentoring"
+      },
+      {
+          "name": "Pyrotechnics"
+      }
+  ]
+}

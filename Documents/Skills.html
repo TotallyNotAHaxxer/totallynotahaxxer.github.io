@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Skills.css">
+    <link rel="icon" type="image/x-icon" href="../Images/Screenshot from 2023-07-04 22-47-39.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+</head>
+
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Documents/Skills.html">Skills</a></li>
+            <li><a href="../Documents/About_Me_Page.html">About Me</a></li>
+            <li><a href="../Documents/Current_Projects.html">Projects</a></li>
+            <li><a href="../Documents/MediaPage.html">Media</a></li>
+            <li><a href="../Documents/BlogPage.html">Blog</a></li>
+            <li><a href="#">Experience</a></li>
+        </ul>
+    </nav>
+    <form onsubmit="event.preventDefault();" role="search">
+        <input id="search" type="search" placeholder="Search Skills" autofocus required />
+        <button type="submit" id="searchButton">Go</button>
+    </form>
+    <div class="container">
+
+    </div>
+</body>
+
+</html>
+<script>
+    function displaySkillInfo(skill) {
+        const container = document.createElement("div");
+        container.classList.add("container");
+        const card = document.createElement("div");
+        card.classList.add("card");
+        const content = document.createElement("div");
+        content.classList.add("content");
+        const cardContent = document.createElement("div");
+        cardContent.classList.add("cardContent");
+        const h3 = document.createElement("h3");
+        h3.textContent = skill.name;
+        const span = document.createElement("span");
+        const skills = skill.skills
+
+        span.textContent = skills;
+
+        h3.appendChild(document.createElement("br"));
+        h3.appendChild(span);
+        cardContent.appendChild(h3);
+        content.appendChild(cardContent);
+        card.appendChild(content);
+        container.appendChild(card);
+        document.querySelector(".container").appendChild(container);
+    }
+    function handleSearchInput() {
+        const searchInput = document.getElementById("search");
+        const searchValue = searchInput.value.toLowerCase();
+        fetch("../Data/Skills.json")
+            .then((response) => response.json())
+            .then((data) => {
+                const matchedSkills = data.skills.filter(
+                    (skill) => skill.name.toLowerCase().includes(searchValue)
+                );
+                document.querySelector(".container").innerHTML = "";
+                if (matchedSkills.length > 0) {
+                    console.log(`Matching skills:`);
+                    matchedSkills.forEach((matchedSkill) => {
+                        console.log(`Skill: ${matchedSkill.name}`);
+                        displaySkillInfo(matchedSkill);
+                    });
+                } else {
+                    console.log("No matching skills found.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching and parsing the skills data.", error);
+            });
+    }
+    const searchInput = document.getElementById("search");
+    searchInput.addEventListener("input", handleSearchInput);
+</script>
